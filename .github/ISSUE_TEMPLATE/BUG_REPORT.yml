@@ -58,8 +58,8 @@ body:
       label: FPGA Core or Other Software
       description: If you're reporting a bug about our interaction with an FPGA Core or another software, what FPGA Core/software? What versions?
       placeholder: |
-        jtcps15 (20210204)
-        RetroArch 1.9.1
+        JTCPS2 (19691231)
+        RetroArch v1.9.1
         My Cool App v0.3 (include a code snippet if it would help!)
     validations:
       required: false
@@ -68,8 +68,9 @@ body:
     id: bug_steps
     attributes:
       label: Steps to reproduce
+      description: |
+        Please list the full steps required to reproduce the issue
       placeholder: |
-        Please list the full steps required to reproduce the issue, for example:
         1. `start the system`
         2. `load core X`
         3. `load game Y` into `core X`
@@ -77,7 +78,7 @@ body:
       required: true
 
   - type: textarea
-    id: bug_expected_behavior
+    id: expected_behavior
     attributes:
       label: Expected Behavior
       description: If you want to include screenshots, paste them into the markdown editor below the form or follow up with a separate comment.
@@ -86,22 +87,23 @@ body:
       required: false
 
   - type: textarea
-    id: bug_actual_behavior
+    id: actual_behavior
     attributes:
       label: Actual Behavior
       placeholder: What happened instead?
     validations:
       required: true
 
-  - type: textarea
-    id: bug_log
+  - type: input
+    id: log
     attributes:
       label: Debug Output/Crash Output
-      render: shell
-      placeholder: |
-        Full debug output can be obtained by running MiMiC with the environment variable `MIMIC_LOG=trace`.
+      description: |
+        Full debug output can be obtained by running MiMiC with UART or by setting the environment variable `MIMIC_LOG=trace`.
         Please create a GitHub Gist containing the debug output. Please do _not_ paste the debug output in the issue, since debug output is long.
         Share a link to a GitHub Gist containing the output of the `crash.log` file.
+      placeholder: |
+        https://gist.github.com/myuser/e6cb69a18488cbd420d5bafdd6bf0ba
     validations:
       required: false
 
@@ -109,9 +111,9 @@ body:
     id: bug_context
     attributes:
       label: Additional Context
-      placeholder: |
+      description: |
         Are there anything atypical about your situation that we should know?
-        For example: is MiMiC NSX running on an unsupported device? Are you passing any unusual command line options or environment variables?
+        For example: is MiMiC NSX running on an unsupported device? Are you passing any unusual command line options or using any environment variables?
     validations:
       required: false
 
