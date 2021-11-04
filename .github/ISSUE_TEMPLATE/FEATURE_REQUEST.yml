@@ -4,9 +4,9 @@
 # SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
 ################################################################################
 name: "Feature Request"
-description: "Suggest a new feature or other enhancement."
+description: "Let us know about an unexpected error, a crash, or an incorrect behavior."
 title: '[Feature]: '
-labels: [ "feature" ]
+labels: [ "enhancement" ]
 assignees:
   - boogermann
 body:
@@ -72,8 +72,7 @@ body:
         or on the command line, since that allows us to understand the full picture of what you are proposing.
 
       placeholder: |
-        If you're not sure of some details, don't worry! When we evaluate the feature request we may suggest modifications as necessary
-        to work within the design constraints of MiMiC.
+        If you're not sure of some details, don't worry! When we evaluate the feature request we may suggest modifications as necessary to work within the design constraints of MiMiC.
     validations:
       required: false
 
