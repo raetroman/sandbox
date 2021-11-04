@@ -20,6 +20,7 @@ body:
         For general usage questions, please see: [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
 
   - type: input
+    id: bug_version
     attributes:
       label: MiMiC NSX version (or build number)
       placeholder: "0.1.1, 1.0.3-fb597ed"
@@ -31,6 +32,7 @@ body:
       required: true
 
   - type: textarea
+    id: bug_app
     attributes:
       label: FPGA Core or Other Software
       description: If you're reporting a bug about our interaction with an FPGA Core or another software, what FPGA Core/software? What versions?
@@ -42,6 +44,7 @@ body:
       required: false
 
   - type: textarea
+    id: bug_steps
     attributes:
       label: Steps to reproduce
       placeholder: |
@@ -53,6 +56,7 @@ body:
       required: true
 
   - type: textarea
+    id: bug_expected_behavior
     attributes:
       label: Expected Behavior
       description: If you want to include screenshots, paste them into the markdown editor below the form or follow up with a separate comment.
@@ -61,6 +65,7 @@ body:
       required: false
 
   - type: textarea
+    id: bug_actual_behavior
     attributes:
       label: Actual Behavior
       placeholder: What happened instead?
@@ -68,6 +73,7 @@ body:
       required: true
 
   - type: textarea
+    id: bug_log
     attributes:
       label: Debug Output/Crash Output
       placeholder: |
@@ -78,6 +84,7 @@ body:
       required: false
 
   - type: textarea
+    id: bug_context
     attributes:
       label: Additional Context
       placeholder: |
@@ -87,6 +94,7 @@ body:
       required: false
 
   - type: textarea
+    id: bug_config_file
     attributes:
       label: Configuration Files
       placeholder: |
@@ -94,10 +102,10 @@ body:
     validations:
       required: false
 
-
   - type: input
+    id: bug_firmware
     attributes:
-      label: MiMiC NSX version (or build number)
+      label: Opened Issues and Pull Requests
       placeholder: "#1234"
       description: |
         Are there any other GitHub issues (open or closed) or Pull Requests that should be linked here? For example: #1234
