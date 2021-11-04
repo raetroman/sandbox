@@ -38,6 +38,8 @@ body:
       label: What FPGA board are you seeing the problem on?
       multiple: false
       options:
+        - DE10-Nano
+        - DECA
         - Arduino Vidor
         - C10EFP-LP
         - Chameleon96
@@ -45,9 +47,7 @@ body:
         - DE0-Nano
         - DE1-Soc
         - DE10-Lite
-        - DE10-nano
         - DE10-Standard
-        - DECA
         - Kria
         - SoCKit
         - Ultra96
@@ -132,3 +132,12 @@ body:
         Are there any other GitHub issues (open or closed) or Pull Requests that should be linked here? For example: #1234
     validations:
       required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://coc.raetro.org)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
