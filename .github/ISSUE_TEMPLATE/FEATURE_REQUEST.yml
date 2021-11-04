@@ -5,8 +5,9 @@
 ################################################################################
 name: "Feature Request"
 description: "Suggest a new feature or other enhancement."
-title: '[Feature]: '
-labels: [ "enhancement" ]
+title: ' '
+labels:
+  - enhancement
 assignees:
   - boogermann
 body:
