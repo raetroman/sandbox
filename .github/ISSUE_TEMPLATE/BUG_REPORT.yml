@@ -3,10 +3,11 @@
 # SPDX-FileType: OTHER
 # SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
 ################################################################################
-name: "Bug Report 🐛"
+name: "Bug Report"
 description: "Let us know about an unexpected error, a crash, or an incorrect behavior."
-title: '[Bug]: '
-labels: [ "bug" ]
+title: 'BUG: '
+labels:
+  - bug
 assignees:
   - boogermann
 body:
@@ -18,12 +19,11 @@ body:
         Thank you for opening an issue. Please note that we try to keep the issue tracker reserved for bug reports and feature requests.
         Please make sure to [search for existing issues](https://github.com/raetro/mimic_firmware/issues) before filing a new one!
 
-        For general usage questions, please see: [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
-
+        For general usage questions, please visit [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
   - type: input
-    id: bug_version
+    id: version
     attributes:
-      label: MiMiC NSX version (or build number)
+      label: Version (or build number)
       placeholder: "0.1.1, 1.0.3-fb597ed"
       description: |
         You can find the version in the about dialog.
@@ -33,47 +33,39 @@ body:
       required: true
 
   - type: dropdown
-    id: bug_fpga
+    id: fpga
     attributes:
       label: What FPGA board are you seeing the problem on?
       multiple: false
       options:
-        - DE10-Nano
-        - DECA
-        - Arduino Vidor
-        - C10EFP-LP
-        - Chameleon96
-        - CYC1000
-        - DE0-Nano
-        - DE1-Soc
-        - DE10-Lite
-        - DE10-Standard
-        - Kria
-        - SoCKit
-        - Ultra96
+        - Terasic DE10-Nano
+        - Arrow DECA
+        - Arrow/Trenz CYC1000
+        - Trenz C10LP-REFKIT
+        - NovTech Chameleon96
 
   - type: textarea
-    id: bug_app
+    id: app
     attributes:
       label: FPGA Core or Other Software
-      description: If you're reporting a bug about our interaction with an FPGA Core or another software, what FPGA Core/software? What versions?
+      description: If you're reporting a bug about MiMiC's interaction with an FPGA Core or another software, what FPGA Core/software? What versions?
       placeholder: |
         JTCPS2 (19691231)
-        RetroArch v1.9.1
-        My Cool App v0.3 (include a code snippet if it would help!)
+        RetroArch v1.9.12
+        My Awesome Game v0.3 (include a code snippet if it would help!)
     validations:
       required: false
 
   - type: textarea
-    id: bug_steps
+    id: steps
     attributes:
       label: Steps to reproduce
       description: |
         Please list the full steps required to reproduce the issue
       placeholder: |
-        1. `start the system`
-        2. `load core X`
-        3. `load game Y` into `core X`
+        1. _load core X_
+        2. _load game Y_ into _core X_
+        3. _map_ joystick
     validations:
       required: true
 
@@ -81,7 +73,7 @@ body:
     id: expected_behavior
     attributes:
       label: Expected Behavior
-      description: If you want to include screenshots, paste them into the markdown editor below the form or follow up with a separate comment.
+      description: If you want to include screenshots, paste them into the markdown editor below or follow up with a separate comment.
       placeholder: What were you expecting?
     validations:
       required: false
@@ -95,7 +87,7 @@ body:
       required: true
 
   - type: input
-    id: log
+    id: logs
     attributes:
       label: Debug Output/Crash Output
       description: |
