@@ -97,6 +97,7 @@ body:
     id: bug_log
     attributes:
       label: Debug Output/Crash Output
+      render: shell
       placeholder: |
         Full debug output can be obtained by running MiMiC with the environment variable `MIMIC_LOG=trace`.
         Please create a GitHub Gist containing the debug output. Please do _not_ paste the debug output in the issue, since debug output is long.
