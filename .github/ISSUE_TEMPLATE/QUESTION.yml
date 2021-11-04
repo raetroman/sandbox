@@ -1,0 +1,37 @@
+################################################################################
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileType: OTHER
+# SPDX-FileCopyrightText: (c) 2021, The Raetro authors and contributors
+################################################################################
+name: "Question"
+description: "Ask a question about MiMiC"
+title: '[Question]: '
+labels: [ "question" ]
+assignees:
+  - boogermann
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hi there,
+
+        Thank you for opening an issue. Please note that we try to keep MiMiC - I/O Controller issue tracker reserved for bug reports and feature requests.
+        For general usage questions, please visit the [Rætro.Community](https://www.raetro.org/community).
+
+  - type: input
+    id: question
+    attributes:
+      label: MiMiC NSX version (or build number)
+      placeholder: "0.1.1, 1.0.3-fb597ed"
+      description: "Ask your question here"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://coc.raetro.org)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
