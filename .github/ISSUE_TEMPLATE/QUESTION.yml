@@ -5,8 +5,9 @@
 ################################################################################
 name: "Question"
 description: "Ask a question about MiMiC"
-title: '[Question]: '
-labels: [ "question" ]
+title: 'Title of your Question'
+labels:
+  - question
 assignees:
   - boogermann
 body:
@@ -15,8 +16,10 @@ body:
       value: |
         Hi there,
 
-        Thank you for opening an issue. Please note that we try to keep MiMiC - I/O Controller issue tracker reserved for bug reports and feature requests.
-        For general usage questions, please visit the [Rætro.Community](https://www.raetro.org/community).
+        Please note that we try to keep the issue tracker reserved for bug reports and feature requests.
+        Make sure to [search for existing questions](https://github.com/raetro/mimic_firmware/issues?q=label%3Aquestion) before filing a new one!
+
+        For general usage questions, please visit the user guide at [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
 
   - type: textarea
     id: question
@@ -31,7 +34,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://coc.raetro.org)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/raetro/community/blob/main/code-of-conduct.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true

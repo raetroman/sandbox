@@ -1,11 +1,11 @@
 ################################################################################
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileType: OTHER
-# SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
+# SPDX-FileCopyrightText: (c) 2021, The Raetro authors and contributors
 ################################################################################
 name: "Feature Request"
 description: "Suggest a new feature or other enhancement."
-title: ' '
+title: 'Title of your Feature Request'
 labels:
   - enhancement
 assignees:
@@ -16,11 +16,10 @@ body:
       value: |
         Hi there,
 
-        Thank you for opening an issue. Please note that we try to keep MiMiC - I/O Controller issue tracker reserved for bug reports and feature requests.
-        For general usage questions, please see: [Rætro.Community](https://www.raetro.org/community).
+        Please note that we try to keep the issue tracker reserved for bug reports and feature requests.
+        Make sure to [search for existing feature requests](https://github.com/raetro/mimic_firmware/issues?q=label%3Aenhancement) before filing a new one!
 
-        If your issue relates to a specific Raetro provider, please open it in the provider's own repository.
-        The index of providers is at [Raetro.Hub](https://github.com/Raetro/hub_providers).
+        For general usage questions, please visit the user guide at [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
 
   - type: input
     id: current_version
@@ -89,7 +88,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://coc.raetro.org)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/raetro/community/blob/main/code-of-conduct.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
