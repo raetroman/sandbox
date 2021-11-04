@@ -4,7 +4,7 @@
 # SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
 ################################################################################
 name: "Feature Request"
-description: "Let us know about an unexpected error, a crash, or an incorrect behavior."
+description: "Suggest a new feature or other enhancement."
 title: '[Feature]: '
 labels: [ "enhancement" ]
 assignees:
