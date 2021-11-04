@@ -21,9 +21,9 @@ body:
   - type: input
     id: question
     attributes:
-      label: MiMiC NSX version (or build number)
-      placeholder: "0.1.1, 1.0.3-fb597ed"
-      description: "Ask your question here"
+      label: Ask a question about MiMiC
+      placeholder: |
+        Ask your question here! Please keep focused on the questions related to MiMiC only.
     validations:
       required: true
 
