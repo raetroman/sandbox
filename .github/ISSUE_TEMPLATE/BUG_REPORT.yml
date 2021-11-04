@@ -3,11 +3,12 @@
 # SPDX-FileType: OTHER
 # SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
 ################################################################################
-name: "Bug report 🐛"
+name: "Bug Report 🐛"
 description: "Let us know about an unexpected error, a crash, or an incorrect behavior."
-title: 'Bug report'
+title: '[Bug]: '
 labels: [ "bug" ]
-assignees: [ "boogermann" ]
+assignees:
+  - boogermann
 body:
   - type: markdown
     attributes:
@@ -30,6 +31,26 @@ body:
         If you are not running the latest version, please try upgrading because your issue may have already been fixed.
     validations:
       required: true
+
+  - type: dropdown
+    id: bug_fpga
+    attributes:
+      label: What FPGA board are you seeing the problem on?
+      multiple: false
+      options:
+        - Arduino Vidor
+        - C10EFP-LP
+        - Chameleon96
+        - CYC1000
+        - DE0-Nano
+        - DE1-Soc
+        - DE10-Lite
+        - DE10-nano
+        - DE10-Standard
+        - DECA
+        - Kria
+        - SoCKit
+        - Ultra96
 
   - type: textarea
     id: bug_app
