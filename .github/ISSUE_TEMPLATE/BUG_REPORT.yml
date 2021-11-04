@@ -1,0 +1,106 @@
+################################################################################
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileType: OTHER
+# SPDX-FileCopyrightText: (c) 2005-2021, The Raetro authors and contributors
+################################################################################
+name: "Bug report 🐛"
+description: "Let us know about an unexpected error, a crash, or an incorrect behavior."
+title: ''
+labels: "bug"
+assignees: ''
+issue_body: true
+body:
+- type: markdown
+  attributes:
+    value: |
+      Hi there,
+
+      Thank you for opening an issue. Please note that we try to keep the issue tracker reserved for bug reports and feature requests.
+      Please make sure to [search for existing issues](https://github.com/raetro/mimic_firmware/issues) before filing a new one!
+
+      For general usage questions, please see: [Rætro.Docs](https://docs.raetro.org/mimic-nsx).
+
+- type: input
+  attributes:
+    label: MiMiC NSX version (or build number)
+    placeholder: "0.1.1, 1.0.3-fb597ed"
+    description: |
+      You can find the version in the about dialog.
+
+      If you are not running the latest version, please try upgrading because your issue may have already been fixed.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: FPGA Core or Other Software
+    description: If you're reporting a bug about our interaction with an FPGA Core or another software, what FPGA Core/software? What versions?
+    placeholder: |
+      jtcps15 (20210204)
+      RetroArch 1.9.1
+      My Cool App v0.3 (include a code snippet if it would help!)
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    placeholder: |
+      Please list the full steps required to reproduce the issue, for example:
+      1. `start the system`
+      2. `load core X`
+      3. `load game Y` into `core X`
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: If you want to include screenshots, paste them into the markdown editor below the form or follow up with a separate comment.
+    placeholder: What were you expecting?
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: Actual Behavior
+    placeholder: What happened instead?
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Debug Output/Crash Output
+    placeholder: |
+      Full debug output can be obtained by running MiMiC with the environment variable `MIMIC_LOG=trace`.
+      Please create a GitHub Gist containing the debug output. Please do _not_ paste the debug output in the issue, since debug output is long.
+      Share a link to a GitHub Gist containing the output of the `crash.log` file.
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: Additional Context
+    placeholder: |
+      Are there anything atypical about your situation that we should know?
+      For example: is MiMiC NSX running on an unsupported device? Are you passing any unusual command line options or environment variables?
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: Configuration Files
+    placeholder: |
+      Paste the relevant parts of your MiMiC.ini configuration file.
+  validations:
+    required: false
+
+
+- type: input
+  attributes:
+    label: MiMiC NSX version (or build number)
+    placeholder: "#1234"
+    description: |
+      Are there any other GitHub issues (open or closed) or Pull Requests that should be linked here? For example: #1234
+  validations:
+    required: false
